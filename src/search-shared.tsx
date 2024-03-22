@@ -5,6 +5,7 @@ import { useState } from 'react';
 export default function SearchShared({
   search,
   buildUrl,
+  placeholder,
 }: {
   search: (
     searchText: string,
@@ -19,6 +20,7 @@ export default function SearchShared({
     hasMore: boolean;
   }>;
   buildUrl: (id: string) => string;
+  placeholder: string;
 }) {
   const [searchText, setSearchText] = useState('');
 
@@ -38,8 +40,7 @@ export default function SearchShared({
     <List
       isLoading={isLoading}
       filtering={false}
-      navigationTitle="Search MusicBrainz"
-      searchBarPlaceholder="Search for artists, releases, recordings, works, labels, areas, places, and events"
+      searchBarPlaceholder={placeholder}
       onSearchTextChange={setSearchText}
       pagination={pagination}
     >

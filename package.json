@@ -3,7 +3,7 @@
   "name": "raycast-musicbrainz-search",
   "title": "MusicBrainz search",
   "description": "Search MusicBrainz for artists, releases and tracks.",
-  "icon": "command-icon.png",
+  "icon": "command-icon.svg",
   "author": "Kirill Korolyov",
   "categories": [
     "Data"
@@ -12,13 +12,13 @@
   "commands": [
     {
       "name": "artist",
-      "title": "Search MusicBrainz artists",
+      "title": "Search artists",
       "description": "Search MusicBrainz artists",
       "mode": "view"
     },
     {
       "name": "release-group",
-      "title": "Search MusicBrainz release groups",
+      "title": "Search release groups",
       "description": "Search MusicBrainz release groups",
       "mode": "view"
     }

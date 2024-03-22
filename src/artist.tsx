@@ -20,5 +20,11 @@ export default function Command() {
     return `https://musicbrainz.org/artist/${id}`;
   }, []);
 
-  return <SearchShared search={search} buildUrl={buildUrl} />;
+  return (
+    <SearchShared
+      search={search}
+      buildUrl={buildUrl}
+      placeholder={'Search for artists, like "The Beatles"...'}
+    />
+  );
 }

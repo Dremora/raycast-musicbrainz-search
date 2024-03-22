@@ -27,5 +27,11 @@ export default function Command() {
     return `https://musicbrainz.org/release-group/${id}`;
   }, []);
 
-  return <SearchShared search={search} buildUrl={buildUrl} />;
+  return (
+    <SearchShared
+      search={search}
+      buildUrl={buildUrl}
+      placeholder={'Search for release groups, like "Abbey Road"...'}
+    />
+  );
 }
