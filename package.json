@@ -1,10 +1,10 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "raycast-musicbrainz-search",
-  "title": "MusicBrainz search",
+  "name": "musicbrainz",
+  "title": "MusicBrainz Search",
   "description": "Search MusicBrainz for artists, release groups and recordings.",
   "icon": "command-icon.svg",
-  "author": "Kirill Korolyov",
+  "author": "Dremora",
   "categories": [
     "Data"
   ],
@@ -12,19 +12,22 @@
   "commands": [
     {
       "name": "artist",
-      "title": "Search artists",
+      "title": "Search Artists",
+      "subtitle": "MusicBrainz",
       "description": "Search MusicBrainz artists",
       "mode": "view"
     },
     {
       "name": "release-group",
-      "title": "Search release groups",
+      "title": "Search Release Groups",
+      "subtitle": "MusicBrainz",
       "description": "Search MusicBrainz release groups",
       "mode": "view"
     },
     {
       "name": "recording",
-      "title": "Search recordings",
+      "title": "Search Recordings",
+      "subtitle": "MusicBrainz",
       "description": "Search MusicBrainz recordings",
       "mode": "view"
     }
@@ -49,9 +52,5 @@
     "fix-lint": "ray lint --fix",
     "lint": "ray lint",
     "publish": "npx @raycast/api@latest publish"
-  },
-  "engines": {
-    "node": ">=20.11.1 <21"
-  },
-  "packageManager": "pnpm@8.15.5"
+  }
 }
