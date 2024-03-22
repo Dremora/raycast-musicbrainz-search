@@ -43,6 +43,7 @@ export default function SearchShared({
       searchBarPlaceholder={placeholder}
       onSearchTextChange={setSearchText}
       pagination={pagination}
+      throttle
     >
       {data?.map((item) => (
         <List.Item
