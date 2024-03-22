@@ -1,14 +1,19 @@
 import { useCallback } from 'react';
 import SearchShared from './search-shared';
-import { searchReleaseGroups, searchLimit } from './musicbrainz';
+import {
+  searchReleaseGroups,
+  searchLimit,
+  getYearFromReleaseDate,
+} from './musicbrainz';
 
 export default function Command() {
   const search = useCallback(async (searchText: string, page: number) => {
     const data = await searchReleaseGroups(searchText, page);
 
     const artists = data['release-groups'].map((releaseGroup) => {
-      const releaseYear =
-        releaseGroup['first-release-date']?.split('-')?.[0] ?? '';
+      const releaseYear = getYearFromReleaseDate(
+        releaseGroup['first-release-date'],
+      );
 
       return {
         id: releaseGroup.id,

@@ -24,3 +24,15 @@ export async function searchReleaseGroups(query: string, pageIndex: number) {
     offset: pageIndex * searchLimit,
   });
 }
+
+export async function searchRecordings(query: string, pageIndex: number) {
+  return await musicBrainzAPI.search('recording', {
+    query,
+    limit: searchLimit,
+    offset: pageIndex * searchLimit,
+  });
+}
+
+export function getYearFromReleaseDate(date: string | undefined) {
+  return date?.split('-')[0] ?? undefined;
+}

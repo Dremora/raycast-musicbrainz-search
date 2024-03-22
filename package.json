@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "raycast-musicbrainz-search",
   "title": "MusicBrainz search",
-  "description": "Search MusicBrainz for artists, releases and tracks.",
+  "description": "Search MusicBrainz for artists, release groups and recordings.",
   "icon": "command-icon.svg",
   "author": "Kirill Korolyov",
   "categories": [
@@ -20,6 +20,12 @@
       "name": "release-group",
       "title": "Search release groups",
       "description": "Search MusicBrainz release groups",
+      "mode": "view"
+    },
+    {
+      "name": "recording",
+      "title": "Search recordings",
+      "description": "Search MusicBrainz recordings",
       "mode": "view"
     }
   ],
